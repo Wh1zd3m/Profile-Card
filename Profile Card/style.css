@@ -1,0 +1,168 @@
+:root{
+    --primary-color:#0bafa7;
+    --background-color:#fff;
+    --card-background:#dafaf8;
+    --text-color: #333;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--background-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 1rem;
+}
+
+.profile-card{
+    background-color: var(--card-background);
+    border-radius: 25px;
+    box-shadow: 2px 4px 8px rgba(0,0,0,0.5);
+    padding: 1.5rem;
+    gap: 3.5rem;
+    max-width: 600px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease-in-out;
+}
+
+.profile-card:hover{
+    transform: translateY(-6px);
+}
+
+
+.profile-card figure{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-card img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 0.5rem;
+}
+
+.profile-card header{
+    text-align: center;
+}
+
+.profile-card h2{
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+
+.profile-card p{
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: var(--text-color);
+    max-width: 600px;
+    margin: 0 auto;
+    overflow-wrap: break-word;
+    margin-bottom: 0.5rem;
+}
+
+.time {
+      font-size: 0.9rem;
+      color: var(--text-color);
+      text-align: center;
+    }
+
+.social-links {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      list-style: none;
+    }
+
+.social-links a {
+      color: var(--primary-color);
+      text-decoration: none;
+      font-size: 1rem;
+      padding: 0.5rem;
+    }
+
+.social-links a:hover,
+.social-links a:focus {
+      text-decoration: underline;
+      outline: 2px solid var(--primary-color);
+      border-radius: 2px;
+      outline-offset: 2px;
+    }
+
+.hobbies {
+      margin-top: 1rem;
+    }
+
+.dislikes{
+    margin-top: 1rem;
+}
+
+.hobbies h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+      color: var(--text-color);
+    }
+
+    .dislikes h3{
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+        color: var(--text-color);
+    }
+
+.hobbies ul{
+      list-style: none;
+      padding-left: 1rem;
+    }
+
+.dislikes ul {
+    list-style: none;
+    padding-left: 1rem;
+}
+
+.hobbies li {
+      font-size: 1rem;
+      line-height: 1.5;
+      color: var(--text-color);
+    }
+
+.dislikes li{
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--text-color);
+}
+
+@media (min-width: 768px){
+    .profile-card{
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .profile-card figure{
+        flex: 0 0 150px;
+    }
+
+    .profile-content{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .profile-card header,
+    .profile-card p,
+    .time {
+        text-align: left;
+      }
+}

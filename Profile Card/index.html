@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile Card</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <article class="profile-card" data-testid="test-profile-card">
+      <figure>
+        <img
+          src="wisdom.jpg"
+          alt="User avatar"
+          data-testid="test-user-avatar"
+        />
+        <figcaption>Wisdom Udoh's Profile</figcaption>
+      </figure>
+      <div class="profile-content">
+        <header>
+          <h2 data-testid="test-user-name" aria-label="User name">
+            Wisdom Udoh
+          </h2>
+        </header>
+        <p data-testid="test-user-bio">
+          I'm Udoh Wisdom a full stack programmer. I love Tinkering with new
+          technological tools and trying to figure out how they work. I also
+          love trying out new ideas and building software to make my client's
+          life and task easier.
+        </p>
+        <div class="time" data-testid="test-user-time"></div>
+        <nav>
+          <ul class="social-links" data-testid="test-user-social-links">
+            <li>
+              <a
+                href="https://twitter.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-testid="test-user-social-twitter"
+                >Twitter</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://linkedin.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-testid="test-user-social-linkedin"
+                >LinkedIn</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-testid="test-user-social-facebook"
+                >Facebook</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://github.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-testid="test-user-social-github"
+                >Github</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <section class="hobbies">
+          <h3>Hobbies</h3>
+          <ul data-testid="test-user-hobbies">
+            <li>Learning new things</li>
+            <li>Programming</li>
+            <li>Tinkering with things</li>
+            <li>Reading</li>
+            <li>Soccer</li>
+            <li>Going to new places</li>
+            <li>Drawing</li>
+          </ul>
+        </section>
+        <section class="dislikes">
+          <h3>Dislikes</h3>
+          <ul data-testid="test-user-dislikes">
+            <li>Unfriendly Environments</li>
+            <li>People who are not nice to others</li>
+            <li>Wasting my time</li>
+            <li>Gossips</li>
+          </ul>
+        </section>
+      </div>
+    </article>
+
+    <script>
+      function updateTime() {
+        const timeElement = document.querySelector(
+          '[data-testid="test-user-time"]'
+        );
+        if (timeElement) {
+          timeElement.textContent = Date.now();
+        }
+      }
+
+      updateTime();
+      setInterval(updateTime, 1000);
+    </script>
+  </body>
+</html>
